@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/static/js/main.a5472941.chunk.js",
-    "main.js.map": "/static/js/main.a5472941.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.1a449f7e.js",
-    "runtime-main.js.map": "/static/js/runtime-main.1a449f7e.js.map",
-    "static/js/2.51261821.chunk.js": "/static/js/2.51261821.chunk.js",
-    "static/js/2.51261821.chunk.js.map": "/static/js/2.51261821.chunk.js.map",
-    "index.html": "/index.html",
-    "static/js/2.51261821.chunk.js.LICENSE.txt": "/static/js/2.51261821.chunk.js.LICENSE.txt"
+    "main.js": "/StandardsForTEE/iteea-stel-etool/static/js/main.a5472941.chunk.js",
+    "main.js.map": "/StandardsForTEE/iteea-stel-etool/static/js/main.a5472941.chunk.js.map",
+    "runtime-main.js": "/StandardsForTEE/iteea-stel-etool/static/js/runtime-main.f78282fa.js",
+    "runtime-main.js.map": "/StandardsForTEE/iteea-stel-etool/static/js/runtime-main.f78282fa.js.map",
+    "static/js/2.51261821.chunk.js": "/StandardsForTEE/iteea-stel-etool/static/js/2.51261821.chunk.js",
+    "static/js/2.51261821.chunk.js.map": "/StandardsForTEE/iteea-stel-etool/static/js/2.51261821.chunk.js.map",
+    "index.html": "/StandardsForTEE/iteea-stel-etool/index.html",
+    "static/js/2.51261821.chunk.js.LICENSE.txt": "/StandardsForTEE/iteea-stel-etool/static/js/2.51261821.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1a449f7e.js",
+    "static/js/runtime-main.f78282fa.js",
     "static/js/2.51261821.chunk.js",
     "static/js/main.a5472941.chunk.js"
   ]
