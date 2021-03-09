@@ -1,2 +1,0 @@
-(this["webpackJsonpiteea-stel-etool"]=this["webpackJsonpiteea-stel-etool"]||[]).push([[0],{4:function(e,t,o){"use strict";o.r(t);o(0);var s=o(2),c=o(3),i=Object(c.jsx)("div",{children:"Hello React!!!"});Object(s.render)(i,document.getElementById("root"))}},[[4,1,2]]]);
-//# sourceMappingURL=main.a5472941.chunk.js.map
