@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/iteea-stel-etool%20/static/js/main.a5472941.chunk.js",
+    "main.js.map": "/iteea-stel-etool%20/static/js/main.a5472941.chunk.js.map",
+    "runtime-main.js": "/iteea-stel-etool%20/static/js/runtime-main.ef15b5dd.js",
+    "runtime-main.js.map": "/iteea-stel-etool%20/static/js/runtime-main.ef15b5dd.js.map",
+    "static/js/2.51261821.chunk.js": "/iteea-stel-etool%20/static/js/2.51261821.chunk.js",
+    "static/js/2.51261821.chunk.js.map": "/iteea-stel-etool%20/static/js/2.51261821.chunk.js.map",
+    "index.html": "/iteea-stel-etool%20/index.html",
+    "static/js/2.51261821.chunk.js.LICENSE.txt": "/iteea-stel-etool%20/static/js/2.51261821.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ef15b5dd.js",
+    "static/js/2.51261821.chunk.js",
+    "static/js/main.a5472941.chunk.js"
+  ]
+}
