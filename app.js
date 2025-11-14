@@ -4,10 +4,10 @@ import data from "./data.json" with { type: "json" }
 
 document.addEventListener("alpine:init", () => {
   Alpine.data("iteea", () => ({
-    selectedView: -1,
-    clickMe(val) {
-      this.selectedView = val
-      console.log(this.selectedView)
+    selectedItem: data[0],
+    selectItem(val) {
+      this.selectedItem = val
+      console.log(this.selectedItem)
     },
     searchResults() {
       return data

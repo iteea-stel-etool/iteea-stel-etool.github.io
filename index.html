@@ -71,7 +71,7 @@
       </div>
 
       <div class="row mt-5">
-        <template x-for="(val , index) in searchResults">
+        <template x-for="val in searchResults">
           <div class="col-sm-4 mb-3">
             <div class="card">
               <div class="card-body">
@@ -82,7 +82,7 @@
                 <p class="card-text"><u>Description: </u> <span x-text="val['Benchmark Detail']"></span></p>
                 <hr />
                 <p class="card-text"><span x-text="val['Disciplinary Standard']"></span></p>
-                <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#cardModal" @click="clickMe(index)">View</button>
+                <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#cardModal" @click="selectItem(val)">View</button>
               </div>
             </div>
           </div>
@@ -90,13 +90,44 @@
       </div>
 
       <div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="cardModalLabel">CARD TITLE</h1>
+              <h1 class="modal-title fs-5" id="cardModalLabel"><u>Benchmark:</u> <span x-text="selectedItem['Benchmark']"></span></h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body" x-text="selectedView"></div>
+            <div class="modal-body">
+              <u>Suggested Performance Band:</u> <span class="badge text-bg-secondary ms-1" x-text="selectedItem['Grade Level']"></span>
+              <hr />
+              <u>Description:</u> <span x-text="selectedItem['Benchmark Detail']"></span>
+              <hr />
+              <u>Standard:</u> <span x-text="selectedItem['Disciplinary Standard']"></span>
+              <hr />
+
+              <h6><u>Benchmark Crosswalk:</u></h6>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">NGSS (2013): <span x-text="selectedItem['NGSS (2013)']"></span></li>
+                <li class="list-group-item">CCSS MATH: <span x-text="selectedItem['CCSS MATH']"></span></li>
+                <li class="list-group-item">CCSS ELA: <span x-text="selectedItem['CCSS ELA']"></span></li>
+              </ul>
+
+              <hr />
+
+              <h6><u>Practices For:</u> <span x-text="selectedItem['Grade Level']"></span></h6>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">System Thinking: <span x-text="selectedItem['System Thinking']"></span></li>
+                <li class="list-group-item">Creativity: <span x-text="selectedItem['Creativity']"></span></li>
+                <li class="list-group-item">Making + Doing: <span x-text="selectedItem['Making and Doing']"></span></li>
+                <li class="list-group-item">Critical Thinking: <span x-text="selectedItem['Critical Thinking']"></span> </li>
+                <li class="list-group-item">Optimism: <span x-text="selectedItem['Optimism']"></span></li>
+                <li class="list-group-item">Collaboration: <span x-text="selectedItem['Collaboration']"></span></li>
+                <li class="list-group-item">Communication: <span x-text="selectedItem['Communication']"></span></li>
+                <li class="list-group-item">Ethics: <span x-text="selectedItem['Ethics']"></span></li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary me-auto" data-bs-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
