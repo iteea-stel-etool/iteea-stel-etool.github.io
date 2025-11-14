@@ -27,6 +27,48 @@
     </nav>
 
     <main class="wrapper">
+      <div class="row g-5">
+        <div class="col-md-4">
+          <div class="row">
+            <label for="searchInput" class="col-sm-2 col-form-label">Search: </label>
+            <div class="col">
+              <input type="email" class="form-control" id="searchInput" placeholder="By Benchmark, Phrase or Keyword (EX: 1A)...">
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row">
+            <label for="standards" class="col-form-label col-sm-4">STEL Standards:</label>
+            <div class="col">
+              <select id="standards" class="form-select">
+                <option selected>All Standards</option>
+                <option value="STEL-1">1 - Nature and Characteristics</option>
+                <option value="STEL-2">2 - Core Concepts</option>
+                <option value="STEL-3">3 - Integration of Knowledge</option>
+                <option value="STEL-4">4 - Impact of Technology</option>
+                <option value="STEL-5">5 - Influence of Society</option>
+                <option value="STEL-6">6 - History of Technology</option>
+                <option value="STEL-7">7 - Design in TEE</option>
+                <option value="STEL-8">8 - Apply, Maintain, Assess</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row">
+            <label for="gradeInput" class="col-form-label col-sm-2">Grades:</label>
+            <div class="col-sm-8">
+              <select id="gradeInput" class="form-select">
+                <option selected>All Grades</option>
+                <option>Pre-K-2</option>
+                <option>3-5</option>
+                <option>6-8</option>
+                <option>9-12</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
