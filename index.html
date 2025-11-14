@@ -82,15 +82,27 @@
                 <p class="card-text"><u>Description: </u> <span x-text="val['Benchmark Detail']"></span></p>
                 <hr />
                 <p class="card-text"><span x-text="val['Disciplinary Standard']"></span></p>
-                <button class="btn btn-outline-secondary" @click="clickMe(index)">View</button>
+                <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#cardModal" @click="clickMe(index)">View</button>
               </div>
             </div>
           </div>
         </template>
       </div>
+
+      <div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="cardModalLabel">CARD TITLE</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" x-text="selectedView"></div>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">

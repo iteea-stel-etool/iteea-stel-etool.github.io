@@ -14,3 +14,10 @@ document.addEventListener("alpine:init", () => {
     }
   }))
 })
+
+document.querySelectorAll('.modal').forEach((modal) => {
+  modal.addEventListener('hide.bs.modal', () => {
+    document.activeElement.blur()
+  })
+})
+
