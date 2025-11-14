@@ -26,7 +26,7 @@
       </div>
     </nav>
 
-    <main class="wrapper">
+    <main class="wrapper" x-data="iteea">
       <div class="row g-5">
         <div class="col-md-4">
           <div class="row">
@@ -71,48 +71,22 @@
       </div>
 
       <div class="row mt-5">
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><u>Benchmark:</u> STEL-1B - Explain the tools and techniques that people use to help them do things</h5>
-              <hr />
-              <p class="card-subtitle"><u>Grade:</u> <span class="badge text-bg-secondary ms-1">Pre-K</span></p>
-              <hr />
-              <p class="card-text"><u>Description: </u> The natural world includes trees, plants, animals, rivers, oceans, mountains, and other items that make up the earth's landscape, biomes, and climate. The human-made world includes pencils, rulers, computers, buildings, airplanes, roads, refrigerators, communication devices, and other items developed forthe betterment of humans.</p>
-              <hr />
-              <p class="card-text">STEL 1 Nature and Characteristics of Technology and Engineering</p>
-              <button class="btn btn-outline-secondary">View</button>
+        <template x-for="(val , index) in searchResults">
+          <div class="col-sm-4 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><u>Benchmark:</u> <span x-text="`${ val['Benchmark Id'] } - ${ val['Benchmark'] }`"></span></h5>
+                <hr />
+                <p class="card-subtitle"><u>Grade:</u> <span class="badge text-bg-secondary ms-1" x-text="val['Grade Level']"></span></p>
+                <hr />
+                <p class="card-text"><u>Description: </u> <span x-text="val['Benchmark Detail']"></span></p>
+                <hr />
+                <p class="card-text"><span x-text="val['Disciplinary Standard']"></span></p>
+                <button class="btn btn-outline-secondary" @click="clickMe(index)">View</button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><u>Benchmark:</u> STEL-1B - Explain the tools and techniques that people use to help them do things</h5>
-              <hr />
-              <p class="card-subtitle"><u>Grade:</u> <span class="badge text-bg-secondary ms-1">New</span></p>
-              <hr />
-              <p class="card-text"><u>Description: </u> The natural world includes trees, plants, animals, rivers, oceans, mountains, and other items that make up the earth's landscape, biomes, and climate. The human-made world includes pencils, rulers, computers, buildings, airplanes, roads, refrigerators, communication devices, and other items developed forthe betterment of humans.</p>
-              <hr />
-              <p class="card-text">STEL 1 Nature and Characteristics of Technology and Engineering</p>
-              <button class="btn btn-outline-secondary">View</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><u>Benchmark:</u> STEL-1B - Explain the tools and techniques that people use to help them do things</h5>
-              <hr />
-              <p class="card-subtitle"><u>Grade:</u> <span class="badge text-bg-secondary ms-1">New</span></p>
-              <hr />
-              <p class="card-text"><u>Description: </u> The natural world includes trees, plants, animals, rivers, oceans, mountains, and other items that make up the earth's landscape, biomes, and climate. The human-made world includes pencils, rulers, computers, buildings, airplanes, roads, refrigerators, communication devices, and other items developed forthe betterment of humans.</p>
-              <hr />
-              <p class="card-text">STEL 1 Nature and Characteristics of Technology and Engineering</p>
-              <button class="btn btn-outline-secondary">View</button>
-            </div>
-          </div>
-        </div>
+        </template>
       </div>
     </main>
 
@@ -145,5 +119,9 @@
 
   <footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script type="module" src="./app.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
   </footer>
 </html>
