@@ -1,5 +1,3 @@
-console.log("TESTING")
-
 import data from "./data.json" with { type: "json" }
 
 const list = new Fuse(data, { keys: ["Benchmark", "Benchmark Detail", "Benchmark Id"], threshold: 0.3 })
