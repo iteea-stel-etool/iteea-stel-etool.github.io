@@ -32,7 +32,7 @@
           <div class="row">
             <label for="searchInput" class="col-sm-2 col-form-label">Search: </label>
             <div class="col">
-              <input type="email" class="form-control" id="searchInput" placeholder="By Benchmark, Phrase or Keyword (EX: 1A)...">
+              <input type="input" class="form-control" id="searchInput" placeholder="By Benchmark, Phrase or Keyword (EX: 1A)..." x-model="search">
             </div>
           </div>
         </div>
@@ -40,16 +40,16 @@
           <div class="row">
             <label for="standards" class="col-form-label col-4">STEL Standards:</label>
             <div class="col">
-              <select id="standards" class="form-select">
+              <select id="standards" class="form-select" x-model="standard_selected">
                 <option selected>All Standards</option>
-                <option value="STEL-1">1 - Nature and Characteristics</option>
-                <option value="STEL-2">2 - Core Concepts</option>
-                <option value="STEL-3">3 - Integration of Knowledge</option>
-                <option value="STEL-4">4 - Impact of Technology</option>
-                <option value="STEL-5">5 - Influence of Society</option>
-                <option value="STEL-6">6 - History of Technology</option>
-                <option value="STEL-7">7 - Design in TEE</option>
-                <option value="STEL-8">8 - Apply, Maintain, Assess</option>
+                <option value="STEL 1">1 - Nature and Characteristics</option>
+                <option value="STEL 2">2 - Core Concepts</option>
+                <option value="STEL 3">3 - Integration of Knowledge</option>
+                <option value="STEL 4">4 - Impact of Technology</option>
+                <option value="STEL 5">5 - Influence of Society</option>
+                <option value="STEL 6">6 - History of Technology</option>
+                <option value="STEL 7">7 - Design in TEE</option>
+                <option value="STEL 8">8 - Apply, Maintain, Assess</option>
               </select>
             </div>
           </div>
@@ -58,7 +58,7 @@
           <div class="row">
             <label for="gradeInput" class="col-form-label col-sm-2">Grades:</label>
             <div class="col-sm-8">
-              <select id="gradeInput" class="form-select">
+              <select id="gradeInput" class="form-select" x-model="grade_selected">
                 <option selected>All Grades</option>
                 <option>Pre-K-2</option>
                 <option>3-5</option>
